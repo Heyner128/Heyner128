@@ -1,4 +1,4 @@
-## Hi i'm Heyner Cuevas <img src="https://media.tenor.com/nebZyl8oN7IAAAAi/wave-hello.gif" />
+## Hi i'm Heyner Cuevas <img src="https://media.tenor.com/nebZyl8oN7IAAAAi/wave-hello.gif" style="width: 25px;" />
 
 I'm from Bogotá, Colombia 🇨🇴
 
