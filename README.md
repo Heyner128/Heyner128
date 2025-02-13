@@ -1,16 +1,17 @@
-## Hi there 👋
+## Hi i'm Heyner Cuevas
 
-<!--
-**Heyner128/Heyner128** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+I'm from Bogotá, Colombia 🇨🇴
 
-Here are some ideas to get you started:
+Living in Tours, France 🇫🇷
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+I'm a software developper with a focus on backend development, altought i'm interested in everything related to software, as self-taught i advocate to always learn for fun an curiosity.
+
+
+🛠️ Tech Stack:
+- **Programming languages**: JavaScript | TypeScript | Java | Go
+- **Frontend**: React | Angular | HTML | CSS | SASS
+- **Backend**: Spring Framework | SQL databases
+- **Other tools**: Docker | Git
+
+You can find me on LinkedIn as [@heyner-cuevas](https://linkedin.com/in/heyner-cuevas) 
+
