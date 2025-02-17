@@ -4,7 +4,7 @@ I'm from Bogotá, Colombia 🇨🇴
 
 Living in Tours, France 🇫🇷
 
-I'm a software developper with a focus on backend development, altought i'm interested in everything related to software, as self-taught i advocate to always learn for fun an curiosity.
+I'm a software developper with a focus on backend development, altought i'm interested in everything related to software, as self-taught i advocate to always learn for fun and curiosity.
 
 
 🛠️ Tech Stack:
