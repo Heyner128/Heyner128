@@ -17,4 +17,7 @@ jobs:
             
         - name: Deploy application
           run: |
-            docker build -t portfolio . && docker run --rm --name portfolio -d -p 9099:80 portfolio
+            docker stop -f portfolio 2>/dev/null
+            docker rm -f portfolio 2>/dev/null
+            docker network prune -f 2>/dev/null
+            docker build -t portfolio . && docker run --name portfolio -d -p 9099:80 portfolio
