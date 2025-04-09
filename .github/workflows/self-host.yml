@@ -17,4 +17,4 @@ jobs:
             
         - name: Deploy application
           run: |
-            docker build -t portfolio . && docker run --name portfolio -d -p 9099:80 portfolio
+            docker build -t portfolio . && docker run --rm --name portfolio -d -p 9099:80 portfolio
