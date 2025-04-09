@@ -21,4 +21,4 @@ jobs:
             docker rm -f portfolio || true
             docker network prune -f || true
             docker build -t portfolio . 
-            docker run --name portfolio -d -p 9099:80 portfolio
+            docker run --name portfolio -d -p 9099:80 --restart always portfolio
