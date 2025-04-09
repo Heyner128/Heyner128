@@ -17,7 +17,7 @@ jobs:
             
         - name: Deploy application
           run: |
-            docker stop -f portfolio || true
+            docker stop portfolio || true
             docker rm -f portfolio || true
             docker network prune -f || true
             docker build -t portfolio . 
