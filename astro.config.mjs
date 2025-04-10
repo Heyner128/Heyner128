@@ -6,17 +6,21 @@ import react from "@astrojs/react";
 
 import node from "@astrojs/node";
 
+import { locales, defaultLocale } from "./locales.config.mjs"
+
 // https://astro.build/config
 export default defineConfig({
   vite: {
       plugins: [tailwindcss()],
   },
 
+  site: "https://heyner.me",
+
   output: 'server',
 
   i18n: {
-    locales: ["es", "en", "fr"],
-    defaultLocale: "en",
+    locales: locales,
+    defaultLocale: defaultLocale,
     routing: "manual"
   },
 

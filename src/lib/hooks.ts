@@ -2,10 +2,11 @@ import type { Descriptions } from "@/contents/descriptions/type";
 import type { Titles } from "@/contents/titles/type";
 import { use } from "react";
 
+import { locales, defaultLocale } from "../../locales.config.mjs";
 
 export function usePreferredLanguage() {
     const url = new URL(window.location.href);
-    const lang = url.searchParams.get("lang") ?? "en";
+    const lang = url.searchParams.get("lang") ?? defaultLocale;
 
     return lang;
 }
@@ -13,13 +14,11 @@ export function usePreferredLanguage() {
 export function useTranslatedContent() {
     const lang = usePreferredLanguage();
 
-    const descriptionsFilepath = `../contents/descriptions/descriptions${
-        lang != "en"?"." + lang:""
-    }.ts`;
+    const importSuffix = lang != defaultLocale && locales.includes(lang) ? "." + lang : "";
 
-    const titlesFilepath = `../contents/titles/titles${
-        lang != "en"?"." + lang:""
-    }.ts`;
+    const descriptionsFilepath = `../contents/descriptions/descriptions${importSuffix}.ts`;
+
+    const titlesFilepath = `../contents/titles/titles${importSuffix}.ts`;
 
     return {
         descriptions : use(import(descriptionsFilepath)).data as Descriptions,
