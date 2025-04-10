@@ -18,6 +18,12 @@ export function usePreferredLanguage() {
 }
 
 export function useTranslatedContent() {
+
+    const translationData = import.meta.glob<{data: Record<string, any>}>(
+      "../contents/**/*.ts",
+      { eager: true }
+    );
+
     const lang = usePreferredLanguage();
 
     const importSuffix = lang != defaultLocale && locales.includes(lang) ? "." + lang : "";
@@ -27,7 +33,9 @@ export function useTranslatedContent() {
     const titlesFilepath = `../contents/titles/titles${importSuffix}.ts`;
 
     return {
-        descriptions : use(import(descriptionsFilepath)).data as Descriptions,
-        titles: use(import(titlesFilepath)).data as Titles,
-    }
+      descriptions: translationData[descriptionsFilepath].data as Descriptions,
+      titles: translationData[titlesFilepath].data as Titles,
+    };
+        
+
 }
