@@ -4,6 +4,7 @@ COPY package*.json ./
 RUN npm install
 COPY . .
 RUN npm run build
-FROM nginx:alpine
-COPY --from=builder /app/dist /usr/share/nginx/html
+FROM node:22-alpine
+COPY --from=builder /app/dist /app
+RUN node /app/server/entry.mjs
 EXPOSE 80
