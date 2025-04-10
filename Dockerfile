@@ -1,10 +1,10 @@
-FROM node:22-alpine AS builder
+FROM node:22-alpine
 WORKDIR /app
 COPY package*.json ./
 RUN npm install
 COPY . .
 RUN npm run build
-FROM node:22-alpine
-COPY --from=builder /app/dist /app
+ENV HOST=0.0.0.0
+ENV NODE_ENV=production
 EXPOSE 4321
-CMD ["node", "/app/server/entry.mjs"]
+CMD ["node", "./dist/server/entry.mjs"]
