@@ -1,10 +1,10 @@
-import { education } from "@/lib/data";
 import TimelineItem from "./TimelineItem";
-import { Award } from "lucide-react";
 import MotionWrapper from "./MotionWrapper";
-import { motion } from "framer-motion";
+import { useTranslatedContent } from "@/lib/hooks";
 
 export default function EducationSection() {
+  const { descriptions, titles } = useTranslatedContent();
+
   return (
     <section
       id="education"
@@ -13,18 +13,18 @@ export default function EducationSection() {
       <div className="container max-w-4xl mx-auto px-6 md:px-4">
         <MotionWrapper>
           <h2 className="text-2xl font-bold mb-8 text-center md:text-left">
-            Education
+            {titles.education}
           </h2>
         </MotionWrapper>
 
         <div className="mb-8">
-          {education.map((edu, index) => (
+          {descriptions.education.map((edu, index) => (
             <TimelineItem
               key={edu.institution}
               title={`${edu.institution}`}
               subtitle={`${edu.degree}`}
               date={`${edu.period}`}
-              isLast={index === education.length - 1}
+              isLast={index === descriptions.education.length - 1}
               index={index}
             >
               <p className="text-sm text-muted-foreground mb-3">

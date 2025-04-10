@@ -1,12 +1,26 @@
 import ThemeToggle from "./ui/theme-toggle";
-import { personalInfo } from "@/lib/data";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTranslatedContent } from "@/lib/hooks";
+
+type MenuItem = {
+  text: string;
+  id: string;
+}
 
 export default function GlassHeader() {
-  const MENU_ITEMS = ["experience", "skills", "projects", "education"];
-  
+
+  const { titles } = useTranslatedContent();
+
+  const { experience, skills, projects, education } = titles;
+  const MENU_ITEMS: MenuItem[] = [
+    { text: experience, id: "experience" },
+    { text: skills, id: "skills" },
+    { text: projects, id: "projects" },
+    { text: education, id: "education" },
+  ];
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
@@ -27,15 +41,15 @@ export default function GlassHeader() {
           {MENU_ITEMS.map(
             (item, index) => (
               <motion.a
-                key={item}
-                href={`#${item}`}
+                key={item.id}
+                href={`#${item.id}`}
                 className="transition-colors hover:text-foreground/80 text-foreground/60"
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.2, delay: index * 0.1 }}
                 whileHover={{ y: -2 }}
               >
-                {item.charAt(0).toUpperCase() + item.slice(1)}
+                {item.text.charAt(0).toUpperCase() + item.text.slice(1)}
               </motion.a>
             )
           )}

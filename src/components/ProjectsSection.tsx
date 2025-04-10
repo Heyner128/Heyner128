@@ -1,5 +1,3 @@
-import React from "react";
-import { projects } from "@/lib/data";
 import {
   CardContent,
   CardFooter,
@@ -10,19 +8,22 @@ import { Github } from "lucide-react";
 import { GlassCard } from "./ui/glass-card";
 import MotionWrapper from "./MotionWrapper";
 import { motion } from "framer-motion";
+import { useTranslatedContent } from "@/lib/hooks";
 
 export default function ProjectsSection() {
+  const { descriptions, titles } = useTranslatedContent();
+
   return (
     <section id="projects" className="py-12 relative">
       <div className="container max-w-4xl mx-auto px-6 md:px-4">
         <MotionWrapper>
           <h2 className="text-2xl font-bold mb-8 text-center md:text-left">
-            Projects
+            { titles.projects }
           </h2>
         </MotionWrapper>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {projects.map((project, index) => (
+          {descriptions.projects.map((project, index) => (
             <MotionWrapper key={project.title} delay={index * 0.2}>
               <GlassCard className="group overflow-hidden dark:border-sky-500/10 h-full flex flex-col">
                 <CardHeader className="bg-gradient-to-r from-sky-500/5 to-indigo-500/5">
@@ -56,7 +57,7 @@ export default function ProjectsSection() {
                     whileTap={{ scale: 0.95 }}
                   >
                     <Github className="h-4 w-4 mr-2 group-hover/link:rotate-12 transition-transform duration-300" />
-                    View on GitHub
+                    {titles.seeOnGithub}
                   </motion.a>
                 </CardFooter>
               </GlassCard>

@@ -1,5 +1,3 @@
-import { title } from "framer-motion/client";
-
 export const personalInfo = {
   name: "Heyner Cuevas",
   title: "Software Developer",

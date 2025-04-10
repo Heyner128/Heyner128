@@ -1,9 +1,12 @@
-import { personalInfo } from "@/lib/data";
 import { Mail, Github, MapPin, Linkedin } from "lucide-react";
 import { motion } from "framer-motion";
 import MotionWrapper from "./MotionWrapper";
+import { useTranslatedContent } from "@/lib/hooks";
 
 export default function HeroSection() {
+
+  const { descriptions } = useTranslatedContent();
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -40,14 +43,14 @@ export default function HeroSection() {
               className="text-4xl font-bold mb-2"
               variants={childVariants}
             >
-              {personalInfo.name}
+              {descriptions.personalInfo.name}
             </motion.h1>
 
             <motion.p
               className="text-xl text-muted-foreground mb-6"
               variants={childVariants}
             >
-              {personalInfo.title}
+              {descriptions.personalInfo.title}
             </motion.p>
 
             <motion.div
@@ -60,21 +63,21 @@ export default function HeroSection() {
                 whileHover={{ scale: 1.05, color: "#4b5563" }}
               >
                 <MapPin className="h-4 w-4 mr-2" />
-                {personalInfo.location}
+                {descriptions.personalInfo.location}
               </motion.div>
 
               <motion.a
-                href={`mailto:${personalInfo.email}`}
+                href={`mailto:${descriptions.personalInfo.email}`}
                 className="flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors"
                 variants={childVariants}
                 whileHover={{ scale: 1.05, color: "#4b5563" }}
               >
                 <Mail className="h-4 w-4 mr-2" />
-                {personalInfo.email}
+                {descriptions.personalInfo.email}
               </motion.a>
 
               <motion.a
-                href={personalInfo.github}
+                href={descriptions.personalInfo.github}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors"
@@ -86,7 +89,7 @@ export default function HeroSection() {
               </motion.a>
 
               <motion.a
-                href={personalInfo.linkedin}
+                href={descriptions.personalInfo.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors"
@@ -121,7 +124,7 @@ export default function HeroSection() {
           <div className="bg-gradient-to-r from-sky-500/10 to-indigo-500/10 backdrop-blur-sm backdrop-filter p-4 rounded-lg border border-sky-500/20 dark:border-sky-500/10 shadow-sm">
             <p className="text-muted-foreground pl-4 py-2 mb-4 relative">
               <span className="absolute left-0 top-0 h-full w-1 bg-gradient-to-b from-sky-500 to-indigo-500 rounded-full"></span>
-              {personalInfo.profileDescription}
+              {descriptions.personalInfo.profileDescription}
             </p>
           </div>
         </MotionWrapper>
