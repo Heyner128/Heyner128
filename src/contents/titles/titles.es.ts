@@ -1,6 +1,8 @@
 import type { Titles } from "./type";
 
 export const  data: Titles = {
+    pageTitle: "Heyner Cuevas | Desarrollador Backend | Java, Spring, React",
+    pageDescription: "Portafolio",
     experience: "Experiencia",
     education: "Educación",
     skills: "Habilidades",

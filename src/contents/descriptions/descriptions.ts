@@ -2,6 +2,7 @@ import type { Descriptions } from "./type";
 
 
 export const data: Descriptions = {
+
     personalInfo: {
         name: "Heyner Cuevas",
         title: "Software Developer",

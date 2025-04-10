@@ -4,10 +4,16 @@ import { use } from "react";
 
 import { locales, defaultLocale } from "../../locales.config.mjs";
 
-export function usePreferredLanguage() {
-    const url = new URL(window.location.href);
-    const lang = url.searchParams.get("lang") ?? defaultLocale;
+function getCookie(name: string) {
+    const cookieValue = document.cookie
+        .split('; ')
+        .find(row => row.startsWith(name + '='))
+        ?.split('=')[1];
+    return cookieValue || '';
+}
 
+export function usePreferredLanguage() {
+    const lang = getCookie('preferredLocale') || navigator.language || defaultLocale;
     return lang;
 }
 
