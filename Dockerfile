@@ -6,5 +6,5 @@ COPY . .
 RUN npm run build
 FROM node:22-alpine
 COPY --from=builder /app/dist /app
-RUN node /app/server/entry.mjs
-EXPOSE 80
+EXPOSE 4321
+CMD ["node", "/app/server/entry.mjs"]
