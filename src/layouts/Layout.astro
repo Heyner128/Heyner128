@@ -1,13 +1,14 @@
 ---
 import type { Titles } from "@/contents/titles/type";
 import "../styles/global.css";
+import { locales } from "locales.config.mjs";
 
 interface Props {
   title?: string;
   description?: string;
 }
 
-const importSuffix = Astro.preferredLocale != "en" ? "." + Astro.preferredLocale : "";
+const importSuffix = Astro.preferredLocale != "en" && locales.includes(Astro.preferredLocale ?? "") ? "." + Astro.preferredLocale : "";
 
 const { pageTitle, pageDescription } = (await import(`../contents/titles/titles${importSuffix}.ts`)).data as Titles
 
