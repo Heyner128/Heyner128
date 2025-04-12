@@ -11,7 +11,7 @@ export function useTranslatedContent() {
 
 export function useTheme() {
   const [theme, setTheme] = useState<"light" | "dark">(
-    getPreferredColorScheme()
+    getPreferredColorScheme
   );
 
   useEffect(() => {
