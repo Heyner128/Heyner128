@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useLayoutEffect, useState } from "react";
 import { DEFAULT_LOCALE } from "../../locales.config.mjs";
 import { getCookie, getPreferredColorScheme, getTranslation } from "./utils";
 
@@ -14,7 +14,7 @@ export function useTheme() {
     getPreferredColorScheme
   );
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     document.documentElement.classList.toggle(theme);
   }, [theme]);
     
