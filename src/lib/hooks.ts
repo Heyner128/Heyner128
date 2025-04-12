@@ -15,7 +15,11 @@ export function useTheme() {
   );
 
   useLayoutEffect(() => {
-    document.documentElement.classList.toggle(theme);
+    if(theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
   }, [theme]);
     
   const toggle = () => {
