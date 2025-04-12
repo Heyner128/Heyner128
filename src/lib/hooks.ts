@@ -1,41 +1,26 @@
-import type { Descriptions } from "@/contents/descriptions/type";
-import type { Titles } from "@/contents/titles/type";
-import { use } from "react";
+import { useEffect, useState } from "react";
+import { DEFAULT_LOCALE } from "../../locales.config.mjs";
+import { getCookie, getPreferredColorScheme, getTranslation } from "./utils";
 
-import { locales, defaultLocale } from "../../locales.config.mjs";
-
-function getCookie(name: string) {
-    const cookieValue = document.cookie
-        .split('; ')
-        .find(row => row.startsWith(name + '='))
-        ?.split('=')[1];
-    return cookieValue || '';
-}
-
-export function usePreferredLanguage() {
-    const lang = getCookie('preferredLocale') || navigator.language || defaultLocale;
-    return lang;
-}
 
 export function useTranslatedContent() {
+    const locale = getCookie("preferredLocale") || navigator.language || DEFAULT_LOCALE;
 
-    const translationData = import.meta.glob<{data: Record<string, any>}>(
-      "../contents/**/*.ts",
-      { eager: true }
-    );
+    return getTranslation(locale);
+}
 
-    const lang = usePreferredLanguage();
+export function useTheme() {
+  const [theme, setTheme] = useState<"light" | "dark">(
+    getPreferredColorScheme()
+  );
 
-    const importSuffix = lang != defaultLocale && locales.includes(lang) ? "." + lang : "";
+  useEffect(() => {
+    document.documentElement.classList.toggle(theme);
+  }, [theme]);
+    
+  const toggle = () => {
+    setTheme(theme === "light" ? "dark" : "light");
+  };
 
-    const descriptionsFilepath = `../contents/descriptions/descriptions${importSuffix}.ts`;
-
-    const titlesFilepath = `../contents/titles/titles${importSuffix}.ts`;
-
-    return {
-      descriptions: translationData[descriptionsFilepath].data as Descriptions,
-      titles: translationData[titlesFilepath].data as Titles,
-    };
-        
-
+  return [theme, toggle] as const;
 }

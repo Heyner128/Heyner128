@@ -1,2 +1,2 @@
-export const locales = ["en", "es", "fr"];
-export const defaultLocale = "en";
+export const ALLOWED_LOCALES = ["en", "es", "fr"];
+export const DEFAULT_LOCALE = "en";
