@@ -3,22 +3,14 @@ import MotionWrapper from "./MotionWrapper";
 import { GlassCard } from "./ui/glass-card";
 import { useTranslatedContent } from "@/lib/hooks";
 
-function SkillTag({ skill, index }: { skill: string; index: number }) {
+function SkillTag({ skill }: Readonly<{ skill: string }>) {
   return (
-    <motion.div
-      initial={{ opacity: 0, scale: 0.8 }}
-      whileInView={{ opacity: 1, scale: 1 }}
-      transition={{
-        type: "spring",
-        stiffness: 260,
-        damping: 20,
-        delay: 0.05 * index,
-      }}
-      whileHover={{ scale: 1.05, y: -2 }}
+    <div
       className="px-3 py-1 bg-muted/80 backdrop-blur-sm rounded-md text-sm border border-purple-500/10 shadow-sm"
+      key={skill}
     >
       {skill}
-    </motion.div>
+    </div>
   );
 }
 

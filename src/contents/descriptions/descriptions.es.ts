@@ -5,7 +5,7 @@ export const data: Descriptions = {
         name: "Heyner Cuevas",
         title: "Desarrollador de Software",
         location: "Tours, Francia",
-        email: "jobs@heyner.me",
+        email: "heyner128@gmail.com",
         github: "https://github.com/heyner128",
         linkedin: "https://www.linkedin.com/in/heyner-cuevas/",
         profileDescription: `Soy un desarrollador de software con tres años de experiencia en el diseño, codificación y prueba de soluciones para la industria manufacturera utilizando Java y React. Comprometido con la calidad y el aprendizaje continuo de nuevas tecnologías y metodologías de trabajo.`,

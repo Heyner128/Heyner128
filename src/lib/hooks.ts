@@ -1,10 +1,22 @@
 import { useLayoutEffect, useState } from "react";
 import { DEFAULT_LOCALE } from "../../locales.config.mjs";
-import { getCookie, getPreferredColorScheme, getTranslation } from "./utils";
+import { getCookie, getPreferredColorScheme, getTranslation, setCookie } from "./utils";
 
+
+export function useLocale(): Readonly<[string, (newLocale: string) => void]> {
+    const [locale, setLocale] = useState<string>(getCookie("preferredLocale") || navigator.language || DEFAULT_LOCALE);
+
+    const setPreferredLocale = (newLocale: string) => {
+        setCookie("preferredLocale", newLocale);
+        setLocale(newLocale);
+        window.location.reload();
+    };
+
+    return [ locale, setPreferredLocale ];
+}
 
 export function useTranslatedContent() {
-    const locale = getCookie("preferredLocale") || navigator.language || DEFAULT_LOCALE;
+    const [locale, _] = useLocale();
 
     return getTranslation(locale);
 }

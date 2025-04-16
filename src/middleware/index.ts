@@ -1,8 +1,10 @@
+import { getCookie } from "@/lib/utils";
 import { defineMiddleware } from "astro:middleware";
 
 
 export const onRequest = defineMiddleware(async ( ctx, next ) => {
     const { preferredLocale } = ctx;
+    const requestedLocale = getCookie("preferredLocale", ctx.request.headers.get("cookie"));
     const response = await next();
 
     return new Response(
@@ -11,7 +13,7 @@ export const onRequest = defineMiddleware(async ( ctx, next ) => {
             status: response.status,
             headers: {
                 ...response.headers,
-                "Set-Cookie": `preferredLocale=${preferredLocale}; Path=/; SameSite=Lax`,
+                "Set-Cookie": `preferredLocale=${requestedLocale || preferredLocale}; Path=/; SameSite=Lax`,
             },
         }
     );

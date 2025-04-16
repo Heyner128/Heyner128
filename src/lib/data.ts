@@ -2,7 +2,7 @@ export const personalInfo = {
   name: "Heyner Cuevas",
   title: "Software Developer",
   location: "Tours, France",
-  email: "jobs@heyner.me",
+  email: "heyner128@gmail.com",
   github: "https://github.com/heyner128",
   linkedin: "https://www.linkedin.com/in/heyner-cuevas/",
   profileDescription: `I am a software developer with three years of experience designing, coding an testing solutions for the
