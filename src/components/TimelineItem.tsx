@@ -1,5 +1,5 @@
 import * as React from "react";
-import { concatenateClassNames } from "@/lib/css";
+import { clsx as concatenateClassNames } from "clsx";
 import { motion } from "framer-motion";
 
 interface TimelineItemProps {

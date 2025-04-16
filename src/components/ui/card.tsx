@@ -1,5 +1,5 @@
 import * as React from "react";
-import { concatenateClassNames } from "@/lib/css";
+import { clsx as concatenateClassNames } from "clsx";
 
 const Card = React.forwardRef<
   HTMLDivElement,

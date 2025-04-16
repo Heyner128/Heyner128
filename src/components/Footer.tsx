@@ -1,10 +1,9 @@
-import { personalInfo } from "@/lib/data";
 import { useTranslatedContent } from "@/lib/hooks";
 import { motion } from "framer-motion";
 
 export default function Footer() {
 
-  const { titles } = useTranslatedContent();
+  const { titles, descriptions } = useTranslatedContent();
 
   return (
     <footer className="border-t border-purple-500/10 py-6 bg-gradient-to-b from-background to-muted/20 backdrop-blur-sm">
@@ -20,7 +19,7 @@ export default function Footer() {
             className="text-sm text-muted-foreground text-center md:text-left"
             whileHover={{ scale: 1.01 }}
           >
-            &copy; {new Date().getFullYear()} {personalInfo.name}. {titles.copyright}.
+            &copy; {new Date().getFullYear()} {descriptions.personalInfo.name}. {titles.copyright}.
           </motion.p>
         </motion.div>
       </div>

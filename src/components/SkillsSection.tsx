@@ -64,8 +64,8 @@ export default function SkillsSection() {
                 {titles.skillTypes.programmingLanguages}
               </h3>
               <div className="flex flex-wrap gap-2 justify-center md:justify-start">
-                {descriptions.skills.programmingLanguages.map((skill, index) => (
-                  <SkillTag key={skill} skill={skill} index={index} />
+                {descriptions.skills.programmingLanguages.map(skill => (
+                  <SkillTag key={skill} skill={skill} />
                 ))}
               </div>
             </GlassCard>
@@ -77,8 +77,8 @@ export default function SkillsSection() {
                 {titles.skillTypes.frontendDevelopment}
               </h3>
               <div className="flex flex-wrap gap-2 justify-center md:justify-start">
-                {descriptions.skills.frontendDevelopment.map((skill, index) => (
-                  <SkillTag key={skill} skill={skill} index={index} />
+                {descriptions.skills.frontendDevelopment.map(skill => (
+                  <SkillTag key={skill} skill={skill} />
                 ))}
               </div>
             </GlassCard>
@@ -90,8 +90,8 @@ export default function SkillsSection() {
                 {titles.skillTypes.backendDevelopment}
               </h3>
               <div className="flex flex-wrap gap-2 justify-center md:justify-start">
-                {descriptions.skills.backendDevelopment.map((skill, index) => (
-                  <SkillTag key={skill} skill={skill} index={index} />
+                {descriptions.skills.backendDevelopment.map(skill => (
+                  <SkillTag key={skill} skill={skill} />
                 ))}
               </div>
             </GlassCard>
@@ -103,8 +103,8 @@ export default function SkillsSection() {
                 {titles.skillTypes.databaseAndStorage}
               </h3>
               <div className="flex flex-wrap gap-2 justify-center md:justify-start">
-                {descriptions.skills.databaseAndStorage.map((skill, index) => (
-                  <SkillTag key={skill} skill={skill} index={index} />
+                {descriptions.skills.databaseAndStorage.map(skill => (
+                  <SkillTag key={skill} skill={skill} />
                 ))}
               </div>
             </GlassCard>
@@ -116,8 +116,8 @@ export default function SkillsSection() {
                 {titles.skillTypes.cloudAndDevOps}
               </h3>
               <div className="flex flex-wrap gap-2 justify-center md:justify-start">
-                {descriptions.skills.cloudAndDevOps.map((skill, index) => (
-                  <SkillTag key={skill} skill={skill} index={index} />
+                {descriptions.skills.cloudAndDevOps.map(skill => (
+                  <SkillTag key={skill} skill={skill}  />
                 ))}
               </div>
             </GlassCard>
@@ -129,8 +129,8 @@ export default function SkillsSection() {
                 {titles.skillTypes.toolsAndServices}
               </h3>
               <div className="flex flex-wrap gap-2 justify-center md:justify-start">
-                {descriptions.skills.toolsAndServices.map((skill, index) => (
-                  <SkillTag key={skill} skill={skill} index={index} />
+                {descriptions.skills.toolsAndServices.map(skill => (
+                  <SkillTag key={skill} skill={skill} />
                 ))}
               </div>
             </GlassCard>
