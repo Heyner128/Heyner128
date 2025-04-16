@@ -1,21 +1,19 @@
 import type { Titles } from "./type";
 
-export const data: Titles = {
-    pageTitle: "Heyner Cuevas | Développeur Backend | Java, Spring, React",
-    pageDescription: "Portfolio",
-    education: "Éducation",
-    experience: "Expérience",
-    skills: "Compétences",
-    projects: "Projets",
-    skillTypes: {
-        programmingLanguages: "Langages de programmation",
-        frontendDevelopment: "Développement Frontend",
-        backendDevelopment: "Développement Backend",
-        databaseAndStorage: "Base de données et stockage",
-        cloudAndDevOps: "Cloud et DevOps",
-        toolsAndServices: "Outils et services",
-    },
-    seeOnGithub: "Voir sur GitHub",
-    copyright: "Tous droits réservés",
-    keyAchievements: "Réalisations clés",
+export const pageTitle: Titles['pageTitle'] = "Heyner Cuevas | Développeur Backend | Java, Spring, React";
+export const pageDescription: Titles['pageDescription'] = "Portfolio";
+export const education: Titles['education'] = "Éducation";
+export const experience: Titles['experience'] = "Expérience";
+export const skills: Titles['skills'] = "Compétences";
+export const projects: Titles['projects'] = "Projets";
+export const skillTypes: Titles['skillTypes'] = {
+    programmingLanguages: "Langages de programmation",
+    frontendDevelopment: "Développement Frontend",
+    backendDevelopment: "Développement Backend",
+    databaseAndStorage: "Base de données et stockage",
+    cloudAndDevOps: "Cloud et DevOps",
+    toolsAndServices: "Outils et services",
 };
+export const seeOnGithub: Titles['seeOnGithub'] = "Voir sur GitHub";
+export const copyright: Titles['copyright'] = "Tous droits réservés";
+export const keyAchievements: Titles['keyAchievements'] = "Réalisations clés";

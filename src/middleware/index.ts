@@ -1,4 +1,4 @@
-import { getCookie } from "@/lib/utils";
+import { getCookie } from "@/lib/cookies";
 import { defineMiddleware } from "astro:middleware";
 
 

@@ -1,10 +1,11 @@
 import { useLayoutEffect, useState } from "react";
 import { DEFAULT_LOCALE } from "../../locales.config.mjs";
-import { getCookie, getPreferredColorScheme, getTranslation, setCookie } from "./utils";
-
+import { getCookie, setCookie } from "./cookies";
+import { getTranslatedPageTexts } from "./translations";
+import { changeDocumentColorScheme, getPreferredColorScheme } from "./color-scheme";
 
 export function useLocale(): Readonly<[string, (newLocale: string) => void]> {
-    const [locale, setLocale] = useState<string>(getCookie("preferredLocale") || navigator.language || DEFAULT_LOCALE);
+    const [locale, setLocale] = useState<string>(getCookie("preferredLocale") || DEFAULT_LOCALE);
 
     const setPreferredLocale = (newLocale: string) => {
         setCookie("preferredLocale", newLocale);
@@ -18,7 +19,7 @@ export function useLocale(): Readonly<[string, (newLocale: string) => void]> {
 export function useTranslatedContent() {
     const [locale, _] = useLocale();
 
-    return getTranslation(locale);
+    return getTranslatedPageTexts(locale);
 }
 
 export function useTheme() {
@@ -27,11 +28,7 @@ export function useTheme() {
   );
 
   useLayoutEffect(() => {
-    if(theme === "dark") {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
+    changeDocumentColorScheme(theme);
   }, [theme]);
     
   const toggle = () => {

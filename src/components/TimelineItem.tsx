@@ -1,5 +1,5 @@
 import * as React from "react";
-import { cn } from "@/lib/utils";
+import { concatenateClassNames } from "@/lib/css";
 import { motion } from "framer-motion";
 
 interface TimelineItemProps {
@@ -50,7 +50,7 @@ export default function TimelineItem({
           />
         )}
       </div>
-      <div className={cn("pb-8", isLast ? "pb-0" : "")}>
+      <div className={concatenateClassNames("pb-8", isLast ? "pb-0" : "")}>
         <motion.div
           className="flex flex-col gap-0.5"
           initial={{ opacity: 0, x: -20 }}
