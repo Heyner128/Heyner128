@@ -1,6 +1,7 @@
 import type { Descriptions } from "@/contents/descriptions/type";
 import type { Titles } from "@/contents/titles/type";
 import { ALLOWED_LOCALES, DEFAULT_LOCALE } from "locales.config.mjs";
+import { getCookieValue, setCookieWithDefaults } from "./cookies";
 
 
 export function getTranslatedPageTexts(requestedLocale: string | undefined) {
@@ -48,6 +49,23 @@ function getAvailableLocale(requestedLocale: string | undefined) {
   } else {
     return DEFAULT_LOCALE;
   }
+}
+
+export function getPreferredLocale() {
+  return getCookieValue("preferredLocale") ?? DEFAULT_LOCALE;
+}
+
+export function setPreferredLocale(newLocale: string) {
+  if (ALLOWED_LOCALES.includes(newLocale)) {
+    setCookieWithDefaults({
+      name: "preferredLocale",
+      value: newLocale
+    });
+  } else {
+    throw new Error(`Invalid locale: ${newLocale}`);
+  }
+
+  window.location.reload();
 }
 
 

@@ -1,8 +1,6 @@
 ---
-import type { Titles } from "@/contents/titles/type";
 import "../styles/global.css";
-import { ALLOWED_LOCALES } from "locales.config.mjs";
-import { getCookie } from "@/lib/cookies";
+import { getCookieValue } from "@/lib/cookies";
 import { getTranslatedPageTexts } from "@/lib/translations";
 
 interface Props {
@@ -10,7 +8,9 @@ interface Props {
   description?: string;
 }
 
-const requestedLocale = getCookie("preferredLocale", Astro.request.headers.get("Cookie"))
+const cookieHeader = Astro.request.headers.get("Cookie") ?? "";
+
+const requestedLocale = getCookieValue("preferredLocale",cookieHeader)
 
 const { pageTitle, pageDescription } = getTranslatedPageTexts(requestedLocale ?? Astro.preferredLocale).titles;
 
