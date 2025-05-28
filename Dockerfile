@@ -1,10 +1,10 @@
-FROM node:24.1.0 AS builder
+FROM node:23.11.1 AS builder
 WORKDIR /app
 COPY package*.json ./
 RUN npm ci --omit=dev
 COPY . .
 RUN npm run build
-FROM node:24.1.0 AS runner
+FROM node:23.11.1 AS runner
 WORKDIR /app
 COPY --from=builder /app/dist ./dist
 ENV HOST=0.0.0.0
