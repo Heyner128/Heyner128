@@ -16,4 +16,7 @@ jobs:
           uses: actions/checkout@v3
             
         - name: Deploy application
-          run: docker compose up -d --build
+          run: 
+            podman compose up -d --build &&
+            podman compose systemd -a register &&
+            systemctl --user start podman-compose@portfolio
