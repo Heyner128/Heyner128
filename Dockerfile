@@ -1,7 +1,7 @@
 FROM node:24 AS builder
 WORKDIR /app
 COPY package*.json ./
-RUN npm ci --omit=dev
+RUN npm install
 COPY . .
 ENV HOST=0.0.0.0
 ENV NODE_ENV=production
