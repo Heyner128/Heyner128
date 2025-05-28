@@ -17,6 +17,6 @@ jobs:
             
         - name: Deploy application
           run: 
-            podman compose up -d --build &&
+            podman compose up -d --build --replace &&
             podman compose systemd -a register &&
             systemctl --user start podman-compose@heyner128
