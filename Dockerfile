@@ -1,7 +1,7 @@
 FROM node:22.16.0-slim AS builder
 WORKDIR /app
 COPY package*.json ./
-RUN npm ci --omit=dev
+RUN npm ci --omit=dev --no-package-lock
 COPY . .
 RUN npm run build
 FROM node:22.16.0-slim AS runner
