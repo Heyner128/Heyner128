@@ -19,5 +19,5 @@ jobs:
           run: 
             podman compose down &&
             podman compose up -d --build &&
-            (podman compose systemd -a register || 1) &&
+            (podman compose systemd -a register || 0) &&
             systemctl --user start podman-compose@heyner128
