@@ -19,4 +19,4 @@ jobs:
           run: 
             podman compose up -d --build &&
             podman compose systemd -a register &&
-            systemctl --user start podman-compose@portfolio
+            systemctl --user start podman-compose@heyner128
