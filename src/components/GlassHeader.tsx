@@ -7,7 +7,7 @@ import LanguageSelector from "./ui/language-selector";
 
 type MenuItem = {
   text: string;
-  id: string;
+  link: string;
 }
 
 export default function GlassHeader() {
@@ -16,10 +16,11 @@ export default function GlassHeader() {
 
   const { experience, skills, projects, education } = titles;
   const MENU_ITEMS: MenuItem[] = [
-    { text: experience, id: "experience" },
-    { text: skills, id: "skills" },
-    { text: projects, id: "projects" },
-    { text: education, id: "education" },
+    { text: experience, link: "/#experience" },
+    { text: skills, link: "/#skills" },
+    { text: projects, link: "/#projects" },
+    { text: education, link: "/#education" },
+    { text: "Blog", link: "/blog" },
   ];
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -42,8 +43,8 @@ export default function GlassHeader() {
           {MENU_ITEMS.map(
             (item, index) => (
               <motion.a
-                key={item.id}
-                href={`#${item.id}`}
+                key={item.link}
+                href={item.link}
                 className="transition-colors hover:text-foreground/80 text-foreground/60"
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}

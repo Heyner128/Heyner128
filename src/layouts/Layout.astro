@@ -1,4 +1,6 @@
 ---
+import Footer from "@/components/Footer";
+import GlassHeader from "@/components/GlassHeader";
 import "../styles/global.css";
 import { getCookieValue } from "@/lib/cookies";
 import { getTranslatedPageTexts } from "@/lib/translations";
@@ -41,7 +43,12 @@ const { title = pageTitle, description = pageDescription } =
       class="fixed inset-0 -z-10 h-full w-full bg-background bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
     >
     </div>
-    <slot />
+    <GlassHeader client:only="react" />
+      
+      <main class="min-h-screen">
+        <slot />
+      </main>
+    <Footer client:only="react" />
   </body>
 </html>
 

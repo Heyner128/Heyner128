@@ -1,11 +1,13 @@
 import { Mail, Github, MapPin, Linkedin } from "lucide-react";
 import { motion } from "framer-motion";
 import MotionWrapper from "./MotionWrapper";
-import { useTranslatedContent } from "@/lib/hooks";
+import { useLocale, useTranslatedContent } from "@/lib/hooks";
 
 export default function HeroSection() {
 
-  const { descriptions } = useTranslatedContent();
+  const { titles, descriptions } = useTranslatedContent();
+
+  const [locale] = useLocale();
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -102,22 +104,32 @@ export default function HeroSection() {
             </motion.div>
           </div>
 
-          <motion.div
-            className="mt-6 md:mt-0 flex justify-center"
-            variants={childVariants}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <div className="relative">
-              <div className="absolute -inset-1 bg-gradient-to-r from-indigo-500 to-sky-500 rounded-full blur opacity-30 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
-              <img
-                src="/profile.jpg"
-                alt="Profile"
-                className="w-48 md:w-60 rounded-full relative ring-2 ring-sky-500/50"
-                style={{ objectFit: "cover" }}
-              />
-            </div>
-          </motion.div>
+          <div className="flex flex-col items-center">
+            <motion.div
+              className="mt-6 md:mt-0 flex justify-center"
+              variants={childVariants}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <div className="relative">
+                <div className="absolute -inset-1 bg-gradient-to-r from-indigo-500 to-sky-500 rounded-full blur opacity-30 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+                <img
+                  src="/profile.jpg"
+                  alt="Profile"
+                  className="w-48 md:w-60 rounded-full relative ring-2 ring-sky-500/50"
+                  style={{ objectFit: "cover" }}
+                />
+              </div>
+            </motion.div>
+            <motion.a
+              className="bg-gradient-to-b from-sky-500 to-indigo-500   text-white text-sm px-4 py-2 rounded-full shadow-md transition-colors duration-300 z-50"
+              href={`/cv_${locale}.pdf`}
+              variants={childVariants}
+              whileHover={{ scale: 1.05, color: "#fff" }}
+            >
+              {titles.downloadCV}
+            </motion.a>
+          </div>
         </motion.div>
 
         <MotionWrapper>
