@@ -15,5 +15,6 @@ export const skillTypes: Titles["skillTypes"] = {
     toolsAndServices: "Herramientas y Servicios",
 };
 export const seeOnGithub: Titles["seeOnGithub"] = "Ver en GitHub";
+export const seeOnline: Titles["seeOnline"] = "Ver en Línea";
 export const copyright: Titles["copyright"] = "Todos los derechos reservados.";
 export const keyAchievements: Titles["keyAchievements"] = "Logros Clave";

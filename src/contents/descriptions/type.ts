@@ -35,7 +35,9 @@ export type Descriptions = {
 
   projects: Array<{
     title: string;
+    site?: string;
     github: string;
-    description: string[];
+    description: string;
+    bullets?: string[];
   }>;
 };

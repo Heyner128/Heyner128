@@ -14,6 +14,7 @@ export type Titles = {
         toolsAndServices: string;
     }
     seeOnGithub: string;
+    seeOnline: string;
     copyright: string;
     keyAchievements: string;
 }

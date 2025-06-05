@@ -85,27 +85,16 @@ export const skills: Descriptions['skills'] = {
     ],
 };
 
-export const projects: Descriptions['projects'] = [
+export const projects: Descriptions["projects"] = [
     {
-        title: "Net Zero Carbon Emissions",
-        github: "https://github.com/rishikesh2003/Prodigi",
-        description: [
-            "WiFi-RTT: Desarrollo de seguimiento de ocupación interior para optimización energética.",
-            "Soluciones IoT: Implementación de monitorización inteligente para eficiencia energética y reducción del desperdicio alimentario.",
-            "Seguimiento en tiempo real: Diseño de sistemas para monitorizar emisiones de carbono y optimizar recursos.",
-            "Análisis basados en datos: Análisis de comportamientos de usuarios para gestión adaptativa de energía y alimentación.",
-            "Integración de recompensas: Creación de un sistema de puntos ecológicos basado en QR para fomentar acciones respetuosas con el medio ambiente.",
-        ],
-    },
-    {
-        title: "Mental Aarog",
-        github: "https://github.com/rishikesh2003/mental-aarog",
-        description: [
-            "Una aplicación holística para la salud mental utilizando IA y blockchain para la detección temprana y soluciones personalizadas contra la depresión.",
-            "Las funcionalidades incluyen análisis de redes sociales (seguimiento de sentimientos basado en ML), evaluaciones PHQ-9, integración con relojes inteligentes para datos de sueño y actividad, meditación guiada, y sugerencias inteligentes para comida, viajes, música y películas.",
-            "Desarrollo de un sistema de recompensas utilizando el token criptográfico MAG en Ethereum, permitiendo la participación de usuarios mediante incentivos en la aplicación.",
-            "Almacenamiento seguro implementado a través de web3.storage, IPFS y FileCoin.",
-            "Construido con React, Supabase, Node.js, Flask y Solidity, demostrando una integración armoniosa de tecnología de salud y blockchain.",
+        title: "Stashless",
+        site: "https://stashless.heyner.me",
+        github: "https://github.com/heyner128/Stashless",
+        description: `Stashless es un sistema ligero de gestión de inventario diseñado para ayudar a las pequeñas empresas a realizar un seguimiento de sus niveles de stock.`,
+        bullets: [
+            "Supervisar los niveles de stock en tiempo real",
+            "Crear y gestionar productos y variantes",
+            "Cada usuario tiene inventarios y productos ilimitados",
         ],
     },
 ];
