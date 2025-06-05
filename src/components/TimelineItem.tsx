@@ -38,7 +38,7 @@ export default function TimelineItem({
             damping: 15,
             delay: index * 0.2 + 0.2,
           }}
-          viewport={{ once: true, margin: "-50px" }}
+          viewport={{ once: true,  }}
         />
         {!isLast && (
           <motion.div
