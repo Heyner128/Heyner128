@@ -88,8 +88,8 @@ export default function GlassHeader() {
               {MENU_ITEMS.map(
                 (item, index) => (
                   <motion.a
-                    key={item.id}
-                    href={`#${item.id}`}
+                    key={item.link}
+                    href={item.link}
                     className="transition-colors hover:text-foreground/80 text-foreground/60 py-2"
                     onClick={toggleMenu}
                     initial={{ opacity: 0, x: -20 }}
