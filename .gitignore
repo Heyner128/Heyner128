@@ -11,6 +11,7 @@
 # Production
 /build
 /dist
+/.amplify-hosting
 /.next/
 /.astro
 /out/
