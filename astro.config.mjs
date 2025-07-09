@@ -4,20 +4,18 @@ import tailwindcss from "@tailwindcss/vite";
 
 import react from "@astrojs/react";
 
-import node from "@astrojs/node";
-
 import { ALLOWED_LOCALES, DEFAULT_LOCALE } from "./locales.config.mjs"
-import awsAmplify from "astro-aws-amplify";
 
 // https://astro.build/config
 export default defineConfig({
   vite: {
+    // @ts-ignore
       plugins: [tailwindcss()],
   },
 
   site: "https://heyner.me",
 
-  output: 'server',
+  output: 'static',
 
   i18n: {
     locales: ALLOWED_LOCALES,
@@ -26,6 +24,4 @@ export default defineConfig({
   },
 
   integrations: [react()],
-
-  adapter: awsAmplify(),
 });
