@@ -1,7 +1,0 @@
-services:
-  portfolio:
-    build:
-      context: .
-    ports:
-      - 9099:4321
-    restart: always

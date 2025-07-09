@@ -7,6 +7,7 @@ import react from "@astrojs/react";
 import node from "@astrojs/node";
 
 import { ALLOWED_LOCALES, DEFAULT_LOCALE } from "./locales.config.mjs"
+import awsAmplify from "astro-aws-amplify";
 
 // https://astro.build/config
 export default defineConfig({
@@ -26,7 +27,5 @@ export default defineConfig({
 
   integrations: [react()],
 
-  adapter: node({
-    mode: "standalone"
-  }),
+  adapter: awsAmplify(),
 });
