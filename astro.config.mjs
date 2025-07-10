@@ -4,18 +4,19 @@ import tailwindcss from "@tailwindcss/vite";
 
 import react from "@astrojs/react";
 
+import node from "@astrojs/node";
+
 import { ALLOWED_LOCALES, DEFAULT_LOCALE } from "./locales.config.mjs"
 
 // https://astro.build/config
 export default defineConfig({
   vite: {
-    // @ts-ignore
-      plugins: [tailwindcss()],
+    plugins: [tailwindcss()],
   },
 
   site: "https://heyner.me",
 
-  output: 'static',
+  output: 'server',
 
   i18n: {
     locales: ALLOWED_LOCALES,
@@ -24,4 +25,8 @@ export default defineConfig({
   },
 
   integrations: [react()],
+
+  adapter: node({
+    mode: "standalone"
+  }),
 });
