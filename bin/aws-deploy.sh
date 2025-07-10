@@ -1,5 +1,5 @@
 #!/bin/bash
-export PORT=4321
+export PORT=9099
 PROJECT_NAME=portfolio
 docker compose -p ${PROJECT_NAME} down
 docker compose -p ${PROJECT_NAME} up --detach --build
