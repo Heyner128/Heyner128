@@ -1,7 +1,0 @@
-services:
-  portfolio:
-    build:
-      context: .
-    ports:
-      - "${PORT}:4321"
-    restart: always
