@@ -23,4 +23,4 @@ jobs:
             secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
             region: eu-west-3
             local-image: portfolio:latest
-            image: my-image:latest, my-image:latest
+            image: portfolio:latest, portfolio:latest
