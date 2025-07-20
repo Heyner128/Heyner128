@@ -1,0 +1,26 @@
+name: docker-image.yml
+on:
+    push:
+        branches:
+        - main
+    pull_request:
+        branches:
+        - main
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+        - name: Build Docker image
+          uses: actions/checkout@v2
+          run: docker build . --file Dockerfile --tag portfolio:latest
+
+        - name: Push to ECR
+          id: ecr
+          uses: jwalton/gh-ecr-push@v2
+          with:
+            access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+            secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+            region: eu-west-3
+            local-image: portfolio:latest
+            image: my-image:latest, my-image:latest
