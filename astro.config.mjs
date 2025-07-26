@@ -16,10 +16,6 @@ export default defineConfig({
 
   site: "https://heyner.me",
 
-  redirects: {
-    "/files/[...name]": "https://portfolio-public-resources-1.s3.eu-west-3.amazonaws.com/[...name]",
-  },
-
   output: 'server',
 
   i18n: {
