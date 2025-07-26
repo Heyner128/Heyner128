@@ -14,7 +14,6 @@ export function setPreferredColorScheme(newScheme: "light" | "dark") {
   setCookieWithDefaults({
     name: "preferredColorScheme",
     value: newScheme,
-    samesite: "Lax"
   })
 }
 

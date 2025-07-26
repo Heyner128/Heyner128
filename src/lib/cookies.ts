@@ -48,7 +48,7 @@ export function serializeCookie(cookie: Cookie): string {
   let cookieString = `${cookie.name}=${cookie.value}`;
   for (const [key, value] of Object.entries(cookie)) {
     if (key !== "name" && key !== "value") {
-      cookieString += `;${key}=${value}`;
+      cookieString += `;${key}=${value.toString()}`;
     }
   }
   return cookieString;
