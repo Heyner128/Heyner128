@@ -33,7 +33,7 @@ export default function Blogs({blogs}: { blogs: Blog[] }) {
       <p
         className="text-muted-foreground mb-10 text-lg"
       >{descriptions.blogPageDescription}</p>
-      <div className="space-y-6">
+      <div className="flex flex-col gap-8">
         {blogs.map((blog) => (
           <motion.a key={blog.slug} href={`/blog/${blog.slug}`} initial="hidden" whileInView="visible"
                     whileHover="hover" variants={animationVariants}>
