@@ -114,7 +114,7 @@ export default function HeroSection() {
               <div className="relative">
                 <div className="absolute -inset-1 bg-gradient-to-r from-indigo-500 to-sky-500 rounded-full blur opacity-30 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
                 <img
-                  src="/profile.jpg"
+                  src="/files/profile.jpg"
                   alt="Profile"
                   className="w-48 md:w-60 rounded-full relative ring-2 ring-sky-500/50"
                   style={{ objectFit: "cover" }}
@@ -123,7 +123,7 @@ export default function HeroSection() {
             </motion.div>
             <motion.a
               className="bg-gradient-to-b from-sky-500 to-indigo-500   text-white text-sm px-4 py-2 rounded-full shadow-md transition-colors duration-300 z-50"
-              href={`/cv_${locale}.pdf`}
+              href={`/files/cv_${locale}.pdf`}
               variants={childVariants}
               whileHover={{ scale: 1.05, color: "#fff" }}
             >
