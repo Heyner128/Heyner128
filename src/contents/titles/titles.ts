@@ -3,6 +3,7 @@ import type { Titles } from "./type";
 export const pageTitle: Titles['pageTitle'] = "Heyner Cuevas | Backend Developer | Java, Spring, React";
 export const pageDescription: Titles['pageDescription'] = "Portfolio";
 export const downloadCV: Titles['downloadCV'] = "Download CV";
+export const home: Titles['home'] = "Home";
 export const education: Titles['education'] = "Education";
 export const experience: Titles['experience'] = "Experience";
 export const skills: Titles['skills'] = "Skills";

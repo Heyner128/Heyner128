@@ -1,5 +1,6 @@
 import { useLocale } from "@/lib/hooks";
 import { autoUpdate, flip, FloatingFocusManager, FloatingPortal, offset, size, useClick, useDismiss, useFloating, useInteractions, useListNavigation, useRole, useTypeahead } from "@floating-ui/react";
+import { motion } from "framer-motion";
 import { useRef, useState } from "react";
 
 
@@ -87,13 +88,16 @@ export default function LanguageSelector() {
     
     return (
       <>
-        <div
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.2 }}
           ref={refs.setReference}
           className="text-sm font-bold text-foreground/60 cursor-pointer flex gap-2"
           {...getReferenceProps()}
         >
           {selectedItemLabel}
-        </div>
+        </motion.div>
         {isOpen && (
           <FloatingPortal>
             <FloatingFocusManager context={context} modal={false}>

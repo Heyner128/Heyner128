@@ -2,6 +2,7 @@ import type { Titles } from "./type";
 
 export const pageTitle: Titles["pageTitle"] = "Heyner Cuevas | Desarrollador Backend | Java, Spring, React";
 export const pageDescription: Titles["pageDescription"] = "Portafolio";
+export const home: Titles["home"] = "Inicio";
 export const downloadCV: Titles["downloadCV"] = "Descargar CV";
 export const experience: Titles["experience"] = "Experiencia";
 export const education: Titles["education"] = "Educación";

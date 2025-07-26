@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import MotionWrapper from "@/components/MotionWrapper.tsx";
-import {use} from "react";
 import type {Blog} from "@/content.config.ts";
 import {useTranslatedContent} from "@/lib/hooks.ts";
 
@@ -14,9 +13,9 @@ const animationVariants = {
     },
   },
   hover: {
-    y: -20,
+    y: -5,
     transition: {
-      duration: 0.5,
+      duration: 0.2,
     },
   }
 }

@@ -14,8 +14,9 @@ export default function GlassHeader() {
 
   const { titles } = useTranslatedContent();
 
-  const { experience, skills, projects, education } = titles;
+  const { experience, skills, projects, education, home } = titles;
   const MENU_ITEMS: MenuItem[] = [
+    { text: home, link: "/" },
     { text: experience, link: "/#experience" },
     { text: skills, link: "/#skills" },
     { text: projects, link: "/#projects" },

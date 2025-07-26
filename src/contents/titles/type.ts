@@ -1,6 +1,7 @@
 export type Titles = {
     pageTitle: string;
     pageDescription: string;
+    home: string;
     downloadCV: string;
     experience: string;
     education: string;
