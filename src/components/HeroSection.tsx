@@ -123,7 +123,7 @@ export default function HeroSection() {
               </div>
             </motion.div>
             <motion.a
-              className="bg-gradient-to-b from-sky-500 to-indigo-500   text-white text-sm px-4 py-2 rounded-full shadow-md transition-colors duration-300 z-50"
+              className="bg-gradient-to-b from-sky-500 to-indigo-500   text-white text-sm px-4 py-2 mt-5 rounded-full shadow-md transition-colors duration-300 z-50"
               href={`${S3_BUCKET_URL}/cv_${locale}.pdf`}
               variants={childVariants}
               whileHover={{ scale: 1.05, color: "#fff" }}

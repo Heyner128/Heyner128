@@ -1,0 +1,44 @@
+---
+import {getCollection} from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import {render} from "astro:content";
+
+const blogsCollection = await getCollection('blogs');
+
+const { slug } = Astro.params;
+
+const blogCollection = blogsCollection.find(collection => collection.data.slug === slug);
+
+const blog = blogCollection?.data;
+
+if(!blog || !blogCollection) {
+  throw new Error(`Blog "${slug}" not found.`);
+}
+
+const { Content } = await render(blogCollection!);
+
+const dateFormatter = new Intl.DateTimeFormat("fr-Fr", {
+  year: 'numeric',
+  month: 'numeric',
+  day: 'numeric',
+})
+---
+
+<Layout>
+    <section
+            id="blog"
+            class="py-12 container max-w-4xl mx-auto px-6 md:px-4"
+    >
+        <div class="bg-card rounded-lg shadow-sm my-5">
+          <div class="bg-gradient-to-r from-sky-500/5 to-indigo-500/5 p-5">
+            <h2 class="text-3xl font-bold mb-4">
+              {blog!.title}
+            </h2>
+            <span class="text-sm text-muted-foreground">{dateFormatter.format(blog!.publicationDate)}</span>
+          </div>
+          <div class="p-5">
+            <Content />
+          </div>
+        </div>
+    </section>
+</Layout>

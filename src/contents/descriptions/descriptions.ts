@@ -100,3 +100,5 @@ export const projects: Descriptions['projects'] = [
         ],
     },
 ];
+
+export const blogPageDescription = "Here i wrote about everything in life, random thoughts and ideas, and some technical stuff.";

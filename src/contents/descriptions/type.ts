@@ -40,4 +40,6 @@ export type Descriptions = {
     description: string;
     bullets?: string[];
   }>;
+
+  blogPageDescription: string;
 };

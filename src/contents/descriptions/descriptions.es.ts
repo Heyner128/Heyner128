@@ -98,3 +98,5 @@ export const projects: Descriptions["projects"] = [
         ],
     },
 ];
+
+export const blogPageDescription = "Aquí escribo sobre todo en la vida, pensamientos e ideas aleatorias, y algunos temas técnicos.";

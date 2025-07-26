@@ -1,0 +1,20 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Blogs from "@/components/Blogs.tsx";
+
+import { getCollection } from "astro:content";
+
+const blogsCollection = await getCollection('blogs');
+---
+
+<Layout>
+    <section
+      id="blog"
+      class="py-12"
+    >
+        <div class="container max-w-4xl mx-auto px-6 md:px-4">
+
+            <Blogs blogs={blogsCollection.map(collectionItem => collectionItem.data)} client:only="react" />
+        </div>
+    </section>
+</Layout>

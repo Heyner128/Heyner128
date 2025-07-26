@@ -49,6 +49,21 @@ const { title = pageTitle, description = pageDescription } =
         <slot />
       </main>
     <Footer client:only="react" />
+    <script>
+
+      document.addEventListener('DOMContentLoaded', () => {
+        const intervalId = setInterval(() => {
+          const hash = window.location.hash;
+          if (hash) {
+            const el = document.querySelector('section' + hash);
+            if (el) {
+              el.scrollIntoView({ behavior: 'smooth' });
+              clearInterval(intervalId);
+            }
+          }
+        }, 500);
+      });
+    </script>
   </body>
 </html>
 
