@@ -12,9 +12,10 @@ jobs:
         runs-on: ubuntu-24.04-arm
         environment: 'AWS production'
         steps:
-        - name: Build Docker image
+        - name: Checkout code
           uses: actions/checkout@v2
-        - run: docker build . --file Dockerfile --tag portfolio:latest
+        - name: Build Docker image
+          run: docker build . --file Dockerfile --tag portfolio:latest
       
         - name: Push to ECR
           id: ecr
