@@ -12,30 +12,16 @@ jobs:
         runs-on: ubuntu-24.04-arm
         environment: 'AWS production'
         steps:
-        - name: Build Backend Docker image
+        - name: Build Docker image
           uses: actions/checkout@v2
-        - run: docker build . --file Dockerfile --tag stashless-api:latest
-
-        - name: Build Frontend Docker image
-          uses: actions/checkout@v2
-        - run: docker build ./web --file Dockerfile --tag stashless-web:latest
-
-        - name: Push Backend Image to ECR
-          id: ecr-backend
+        - run: docker build . --file Dockerfile --tag portfolio:latest
+      
+        - name: Push to ECR
+          id: ecr
           uses: jwalton/gh-ecr-push@v2
           with:
             access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
             secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
             region: eu-west-3
-            local-image: stashless-api:latest
-            image: stashless-api:latest, stashless-api:latest
-
-        - name: Push Frontend Image to ECR
-          id: ecr-frontend
-          uses: jwalton/gh-ecr-push@v2
-          with:
-            access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-            secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-            region: eu-west-3
-            local-image: stashless-web:latest
-            image: stashless-web:latest, stashless-web:latest
+            local-image: stashless:latest
+            image: portfolio:latest, portfolio:latest
