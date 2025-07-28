@@ -1,4 +1,4 @@
-name: aws-production-deploy
+name: AWS production deploy
 on:
     push:
         branches:
