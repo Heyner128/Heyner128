@@ -10,6 +10,7 @@ on:
 jobs:
     build:
         runs-on: ubuntu-24.04-arm
+        environment: 'AWS production'
         steps:
         - name: Build Docker image
           uses: actions/checkout@v2
