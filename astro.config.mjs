@@ -8,9 +8,14 @@ import node from "@astrojs/node";
 
 import { ALLOWED_LOCALES, DEFAULT_LOCALE } from "./locales.config.mjs"
 
+import sitemap from "@astrojs/sitemap";
+
+import robotsTxt from "astro-robots-txt";
+
 // https://astro.build/config
 export default defineConfig({
   vite: {
+    // @ts-ignore
     plugins: [tailwindcss()],
   },
 
@@ -24,7 +29,7 @@ export default defineConfig({
     routing: "manual"
   },
 
-  integrations: [react()],
+  integrations: [react(), sitemap(), robotsTxt()],
 
   adapter: node({
     mode: "standalone"
