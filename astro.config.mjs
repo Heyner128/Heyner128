@@ -11,6 +11,13 @@ import { ALLOWED_LOCALES, DEFAULT_LOCALE } from "./locales.config.mjs"
 import sitemap from "@astrojs/sitemap";
 
 import robotsTxt from "astro-robots-txt";
+import * as path from "node:path";
+import * as fs from "node:fs";
+
+const SITE_DEPLOY_URL = "https://heyner.me"
+
+const blogSlugs = fs.readdirSync(path.join(process.cwd(), "src/contents/blogs"))
+    .map(file => file.replace(/\.md$/, ""));
 
 // https://astro.build/config
 export default defineConfig({
@@ -19,7 +26,7 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
 
-  site: "https://heyner.me",
+  site: SITE_DEPLOY_URL,
 
   output: 'server',
 
@@ -29,7 +36,11 @@ export default defineConfig({
     routing: "manual"
   },
 
-  integrations: [react(), sitemap(), robotsTxt()],
+  integrations: [react(), sitemap({
+    customPages: [...blogSlugs.map(slug => {
+      return `${SITE_DEPLOY_URL}/blog/${slug}`
+    })],
+  }), robotsTxt()],
 
   adapter: node({
     mode: "standalone"
