@@ -1,1 +1,1 @@
-export const RESOURCES_URL = "https://resources.heyners.me"
+export const RESOURCES_URL = "https://resources.heyner.me"
