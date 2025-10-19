@@ -1,1 +1,1 @@
-export const S3_BUCKET_URL = "https://portfolio-public-resources-1.s3.eu-west-3.amazonaws.com"
+export const RESOURCES_URL = "https://resources.heyners.me"
