@@ -2,12 +2,13 @@
 import {getCollection} from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 import {render} from "astro:content";
+import {slug as slugify} from "github-slugger";
 
 const blogsCollection = await getCollection('blogs');
 
 const { slug } = Astro.params;
 
-const blogCollection = blogsCollection.find(collection => collection.data.slug === slug);
+const blogCollection = blogsCollection.find(collection => slugify(collection.data.title) === slug);
 
 const blog = blogCollection?.data;
 
