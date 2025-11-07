@@ -8,7 +8,7 @@ const blogsCollection = await getCollection('blogs');
 
 const { slug } = Astro.params;
 
-const blogCollection = blogsCollection.find(collection => slugify(collection.data.title) === slug);
+const blogCollection = blogsCollection.find(collectionItem => collectionItem.id === slug);
 
 const blog = blogCollection?.data;
 
