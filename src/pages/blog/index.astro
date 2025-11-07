@@ -14,7 +14,9 @@ const blogsCollection = await getCollection('blogs');
     >
         <div class="container max-w-4xl mx-auto px-6 md:px-4">
 
-            <Blogs blogs={blogsCollection.map(collectionItem => collectionItem.data)} client:only="react" />
+            <Blogs blogs={blogsCollection.map(collectionItem => {
+                return {id: collectionItem.id, ...collectionItem.data}
+            })} client:only="react" />
         </div>
     </section>
 </Layout>

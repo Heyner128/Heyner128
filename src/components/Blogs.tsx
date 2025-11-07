@@ -35,7 +35,7 @@ export default function Blogs({blogs}: { blogs: Blog[] }) {
       >{descriptions.blogPageDescription}</p>
       <div className="flex flex-col gap-8">
         {blogs.map((blog) => (
-          <motion.a key={slugify(blog.title)} href={`/blog/${slugify(blog.title)}`} initial="hidden" whileInView="visible"
+          <motion.a key={blog.id} href={`/blog/${slugify(blog.id)}`} initial="hidden" whileInView="visible"
                     whileHover="hover" variants={animationVariants}>
             <article className="p-4 bg-card rounded-lg shadow-sm">
               <h3 className="text-lg font-semibold">{blog.title}</h3>

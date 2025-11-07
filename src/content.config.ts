@@ -11,6 +11,7 @@ const blogs = defineCollection({
 });
 
 export type Blog ={
+  id: string;
   title: string;
   description: string;
   publicationDate: Date;
