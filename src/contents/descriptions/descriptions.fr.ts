@@ -97,6 +97,16 @@ export const projects: Descriptions["projects"] = [
             "Chaque utilisateur dispose d'inventaires et de produits illimités",
         ],
     },
+    {
+        title: "RTMP",
+        site: "https://rtmp.heyner.me",
+        github: "https://github.com/heyner128/rtmp",
+        description: `Une implementation du protocole RTMP en Go.`,
+        bullets: [
+            "Capable de recevoir flux de video des clients RTMP les plus utilisés",
+            "70% couverture des tests",
+        ],
+    }
 ];
 
 export const blogPageDescription = "Ici, j'écris sur tout dans la vie, des réflexions et idées aléatoires, ainsi que sur des sujets techniques.";
