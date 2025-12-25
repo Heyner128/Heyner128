@@ -99,7 +99,6 @@ export const projects: Descriptions["projects"] = [
     },
     {
         title: "RTMP",
-        site: "https://rtmp.heyner.me",
         github: "https://github.com/heyner128/rtmp",
         description: `Une implementation du protocole RTMP en Go.`,
         bullets: [

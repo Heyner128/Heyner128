@@ -51,8 +51,8 @@ export default function ProjectsSection() {
                   </ul>
                 </CardContent>
                 <CardFooter className="flex justify-around md:justify-start gap-4 items-center border-t border-border/30 bg-gradient-to-r from-sky-500/5 to-indigo-500/5">
-                  <motion.a
-                    href={project.site ?? "#"}
+                  {project?.site && <motion.a
+                    href={project.site}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center text-sm text-muted-foreground hover:text-sky-500 transition-colors group/link pt-8"
@@ -61,7 +61,7 @@ export default function ProjectsSection() {
                   >
                     <Link className="h-4 w-4 mr-2 group-hover/link:rotate-12 transition-transform duration-300" />
                     {titles.seeOnline}
-                  </motion.a>
+                  </motion.a>}
                   <motion.a
                     href={project.github}
                     target="_blank"
