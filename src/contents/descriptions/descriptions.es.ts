@@ -47,19 +47,15 @@ export const education: Descriptions['education'] = [
         institution: "Universidad Nacional de Colombia",
         location: "Bogotá, Colombia",
         degree: "Ingeniería Industrial",
-        period: "Sep 2019 - Sep 2021",
+        period: "Sep 2013 - Sep 2021",
     },
 ];
 
 export const skills: Descriptions['skills'] = {
-    programmingLanguages: ["TypeScript", "JavaScript", "Python", "Java"],
-    frontendDevelopment: ["Angular", "React", "Tailwind CSS", "HTML", "CSS"],
+    programmingLanguages: ["TypeScript", "Python", "Java"],
+    frontendDevelopment: ["Angular", "React"],
     backendDevelopment: [
-        "Spring Boot",
-        "Spring MVC",
-        "Spring Security",
-        "Spring Data JPA/JDBC",
-        "Spring Batch",
+        "Spring",
         "Quarkus",
     ],
     databaseAndStorage: [
@@ -69,23 +65,20 @@ export const skills: Descriptions['skills'] = {
         "Microsoft SQL Server",
     ],
     cloudAndDevOps: [
-        "Azure",
-        "Cloudflare Tunnels",
-        "Cloudflare Zero-Trust",
         "Azure DevOps",
+        "Azure",
         "Github Actions",
     ],
     toolsAndServices: [
         "Docker",
         "Git",
-        "Ubuntu",
-        "RedHat Enterprise Linux",
+        "Debian",
         "Visual Studio Code",
         "IntelliJ IDEA",
     ],
 };
 
-export const projects: Descriptions["projects"] = [
+export const projects: Descriptions['projects'] = [
     {
         title: "Stashless",
         site: "https://stashless.heyner.me",
