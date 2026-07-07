@@ -15,6 +15,7 @@ export type Titles = {
         databaseAndStorage: string;
         cloudAndDevOps: string;
         toolsAndServices: string;
+        aiAndCodingAgents: string;
     }
     seeOnGithub: string;
     seeOnline: string;

@@ -31,6 +31,7 @@ export type Descriptions = {
     databaseAndStorage: string[];
     cloudAndDevOps: string[];
     toolsAndServices: string[];
+    aiAndCodingAgents: string[];
   };
 
   projects: Array<{

@@ -1,6 +1,6 @@
 import type { Titles } from "./type";
 
-export const pageTitle: Titles["pageTitle"] = "Heyner Cuevas | Desarrollador Backend | Java, Spring, React";
+export const pageTitle: Titles["pageTitle"] = "Heyner Cuevas | Desarrollador de Software | Java, Spring, Go, React";
 export const pageDescription: Titles["pageDescription"] = "Portafolio";
 export const home: Titles["home"] = "Inicio";
 export const downloadCV: Titles["downloadCV"] = "Descargar CV";
@@ -16,6 +16,7 @@ export const skillTypes: Titles["skillTypes"] = {
     databaseAndStorage: "Base de Datos y Almacenamiento",
     cloudAndDevOps: "Nube y DevOps",
     toolsAndServices: "Herramientas y Servicios",
+    aiAndCodingAgents: "IA y Agentes de Código",
 };
 export const seeOnGithub: Titles["seeOnGithub"] = "Ver en GitHub";
 export const seeOnline: Titles["seeOnline"] = "Ver en Línea";

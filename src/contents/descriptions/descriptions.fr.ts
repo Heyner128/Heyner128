@@ -3,35 +3,35 @@ import type { Descriptions } from "./type";
 export const personalInfo: Descriptions['personalInfo'] = {
     name: "Heyner Cuevas",
     title: "Développeur Logiciel",
-    location: "Tours, France",
+    location: "Lyon, France",
     email: "heyner128@gmail.com",
     github: "https://github.com/heyner128",
     linkedin: "https://www.linkedin.com/in/heyner-cuevas/",
-    profileDescription: `Je suis un développeur logiciel avec trois ans d'expérience dans la conception, le codage et le test de solutions pour l'industrie manufacturière en utilisant Java et React. Engagé dans la qualité et l'apprentissage continu de nouvelles technologies et méthodologies de travail.`,
+    profileDescription: `Développeur logiciel avec plus de 4 ans d'expérience dans la conception de systèmes industriels et manufacturiers. Spécialisé dans la livraison de solutions backend résilientes et de systèmes d'exécution personnalisés pour des clients entreprises.`,
 };
 
 export const workExperience: Descriptions['workExperience'] = [
     {
-        company: "SKF France",
-        location: "Saint-Cyr-sur-Loire, France",
+        company: "Astrée Software",
+        location: "Lyon, France",
         position: "Développeur Logiciel",
-        period: "Fév 2022 - Déc 2022",
+        period: "Juin 2025 - Présent",
         achievements: [
-            "Développement d'un site web pour gérer les commandes d'emballage de roulements",
-            "Développement d'une API pour la gestion des informations de référence de production",
-            "Conception de tests unitaires et d'intégration",
-            "Automatisation des flux de travail et du traitement des données",
+            "Livraison de systèmes d'exécution de fabrication personnalisés pour plus de 20 clients",
+            "Développement d'interfaces d'intégration ERP avec 0% de perte de données et transmission en quasi temps réel",
+            "Traduction et développement d'exigences de fabrication personnalisées",
+            "Collaboration dans une équipe de 6 personnes en méthodologie agile et programmation extrême",
         ],
     },
     {
         company: "SKF France",
-        location: "Saint-Cyr-sur-Loire, France",
-        position: "Stagiaire Développeur Logiciel",
-        period: "Mar 2021 - Déc 2021",
+        location: "Tours, France",
+        position: "Développeur Logiciel",
+        period: "Fév 2022 - Déc 2024",
         achievements: [
-            "Développement d'une base de données et d'une interface graphique pour la gestion des données qualité",
-            "Développement de tableaux de bord et de visualisations de données",
-            "Documentation, support et maintenance des applications développées",
+            "Leadership technique de l'équipe d'automatisation des flux de travail métier",
+            "Développement d'un système d'exécution de fabrication entièrement personnalisé pour 3 lignes d'emballage",
+            "Conception et implémentation d'un prototype de modèle de machine learning pour la maintenance prédictive",
         ],
     },
 ];
@@ -52,29 +52,31 @@ export const education: Descriptions['education'] = [
 ];
 
 export const skills: Descriptions['skills'] = {
-    programmingLanguages: ["TypeScript", "Python", "Java"],
+    programmingLanguages: ["TypeScript", "Java", "Go", "Python"],
     frontendDevelopment: ["Angular", "React"],
-    backendDevelopment: [
-        "Spring",
-        "Quarkus",
-    ],
+    backendDevelopment: ["Spring"],
     databaseAndStorage: [
-        "MySQL",
         "PostgreSQL",
+        "MySQL",
         "Hibernate",
         "Microsoft SQL Server",
     ],
     cloudAndDevOps: [
+        "AWS",
         "Azure DevOps",
-        "Azure",
         "Github Actions",
     ],
     toolsAndServices: [
         "Docker",
         "Git",
-        "Debian",
-        "Visual Studio Code",
         "IntelliJ IDEA",
+        "Visual Studio Code",
+    ],
+    aiAndCodingAgents: [
+        "Claude",
+        "Claude Code",
+        "GitHub Copilot",
+        "Cursor",
     ],
 };
 

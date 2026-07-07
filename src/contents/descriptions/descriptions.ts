@@ -3,37 +3,35 @@ import type { Descriptions } from "./type";
 export const personalInfo: Descriptions['personalInfo'] = {
     name: "Heyner Cuevas",
     title: "Software Developer",
-    location: "Tours, France",
+    location: "Lyon, France",
     email: "heyner128@gmail.com",
     github: "https://github.com/heyner128",
     linkedin: "https://www.linkedin.com/in/heyner-cuevas/",
-    profileDescription: `I am a software developer with three years of experience designing, coding an testing solutions for the
-manufacturing industry using Java and React. Engaged with the quality and the continuous learning of new
-technologies and working methodologies.`,
+    profileDescription: `Software developer with 4+ years of experience building manufacturing and industrial systems. Focused on delivering resilient backend solutions and custom execution systems for enterprise clients.`,
 };
 
 export const workExperience: Descriptions['workExperience'] = [
     {
-        company: "SKF France",
-        location: "Saint-Cyr-sur-Loire, France",
+        company: "Astrée Software",
+        location: "Lyon, France",
         position: "Software Developer",
-        period: "Feb 2022 - Dec 2022",
+        period: "Jun 2025 - Present",
         achievements: [
-            "Development of a website to manage bearing packaging orders",
-            "Development of an API for managing production reference information",
-            "Design of unit and integration tests",
-            "Workflow and data processing automation",
+            "Shipped custom manufacturing execution systems for more than 20 clients",
+            "Developed resilient ERP import/export integration interfaces with 0% data loss and near real-time transmission",
+            "Translation and development of custom manufacturing requirements",
+            "Collaboration in a 6-member team using agile and extreme programming, driving code reviews and architectural decisions",
         ],
     },
     {
         company: "SKF France",
-        location: "Saint-Cyr-sur-Loire, France",
-        position: "Software Developer Intern",
-        period: "Mar 2021 - Dec 2021",
+        location: "Tours, France",
+        position: "Software Developer",
+        period: "Feb 2022 - Dec 2024",
         achievements: [
-            "Development of a database and a graphical interface for quality data management",
-            "Development of dashboards and data visualizations",
-            "Documentation, support and maintenance of the developed applications",
+            "Technical lead of the business workflows automation team",
+            "Development of a fully customized manufacturing execution system for 3 packaging lines",
+            "Designed and implemented a proof of concept for a predictive maintenance machine learning model",
         ],
     },
 ];
@@ -54,29 +52,31 @@ export const education: Descriptions['education'] = [
 ];
 
 export const skills: Descriptions['skills'] = {
-    programmingLanguages: ["TypeScript", "Python", "Java"],
+    programmingLanguages: ["TypeScript", "Java", "Go", "Python"],
     frontendDevelopment: ["Angular", "React"],
-    backendDevelopment: [
-        "Spring",
-        "Quarkus",
-    ],
+    backendDevelopment: ["Spring"],
     databaseAndStorage: [
-        "MySQL",
         "PostgreSQL",
+        "MySQL",
         "Hibernate",
         "Microsoft SQL Server",
     ],
     cloudAndDevOps: [
+        "AWS",
         "Azure DevOps",
-        "Azure",
         "Github Actions",
     ],
     toolsAndServices: [
         "Docker",
         "Git",
-        "Debian",
-        "Visual Studio Code",
         "IntelliJ IDEA",
+        "Visual Studio Code",
+    ],
+    aiAndCodingAgents: [
+        "Claude",
+        "Claude Code",
+        "GitHub Copilot",
+        "Cursor",
     ],
 };
 

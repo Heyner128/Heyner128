@@ -3,17 +3,6 @@ import MotionWrapper from "./MotionWrapper";
 import { GlassCard } from "./ui/glass-card";
 import { useTranslatedContent } from "@/lib/hooks";
 
-function SkillTag({ skill }: Readonly<{ skill: string }>) {
-  return (
-    <div
-      className="px-3 py-1 bg-muted/80 backdrop-blur-sm rounded-md text-sm border border-purple-500/10 shadow-sm"
-      key={skill}
-    >
-      {skill}
-    </div>
-  );
-}
-
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -130,6 +119,19 @@ export default function SkillsSection() {
               </h3>
               <div className="flex flex-wrap gap-2 justify-center md:justify-start">
                 {descriptions.skills.toolsAndServices.map(skill => (
+                  <SkillTag key={skill} skill={skill} />
+                ))}
+              </div>
+            </GlassCard>
+          </motion.div>
+
+          <motion.div variants={skillCategoryVariants}>
+            <GlassCard className="p-4">
+              <h3 className="text-lg font-medium mb-3 text-center md:text-left flex items-center">
+                {titles.skillTypes.aiAndCodingAgents}
+              </h3>
+              <div className="flex flex-wrap gap-2 justify-center md:justify-start">
+                {descriptions.skills.aiAndCodingAgents.map(skill => (
                   <SkillTag key={skill} skill={skill} />
                 ))}
               </div>

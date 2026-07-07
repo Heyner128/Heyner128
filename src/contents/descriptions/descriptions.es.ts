@@ -3,35 +3,35 @@ import type { Descriptions } from "./type";
 export const personalInfo: Descriptions['personalInfo'] = {
     name: "Heyner Cuevas",
     title: "Desarrollador de Software",
-    location: "Tours, Francia",
+    location: "Lyon, Francia",
     email: "heyner128@gmail.com",
     github: "https://github.com/heyner128",
     linkedin: "https://www.linkedin.com/in/heyner-cuevas/",
-    profileDescription: `Soy un desarrollador de software con tres años de experiencia en el diseño, codificación y prueba de soluciones para la industria manufacturera utilizando Java y React. Comprometido con la calidad y el aprendizaje continuo de nuevas tecnologías y metodologías de trabajo.`,
+    profileDescription: `Desarrollador de software con más de 4 años de experiencia construyendo sistemas de manufactura e industriales. Enfocado en entregar soluciones backend resilientes y sistemas de ejecución personalizados para clientes empresariales.`,
 };
 
 export const workExperience: Descriptions['workExperience'] = [
     {
-        company: "SKF France",
-        location: "Saint-Cyr-sur-Loire, Francia",
+        company: "Astrée Software",
+        location: "Lyon, Francia",
         position: "Desarrollador de Software",
-        period: "Feb 2022 - Dic 2022",
+        period: "Jun 2025 - Presente",
         achievements: [
-            "Desarrollo de un sitio web para gestionar pedidos de embalaje de rodamientos",
-            "Desarrollo de una API para la gestión de información de referencia de producción",
-            "Diseño de pruebas unitarias y de integración",
-            "Automatización de flujos de trabajo y procesamiento de datos",
+            "Entrega de sistemas de ejecución de manufactura personalizados para más de 20 clientes",
+            "Desarrollo de interfaces de integración ERP con 0% de pérdida de datos y transmisión en tiempo casi real",
+            "Traducción y desarrollo de requisitos de manufactura personalizados",
+            "Colaboración en un equipo de 6 personas con metodología ágil y programación extrema",
         ],
     },
     {
         company: "SKF France",
-        location: "Saint-Cyr-sur-Loire, Francia",
-        position: "Practicante Desarrollador de Software",
-        period: "Mar 2021 - Dic 2021",
+        location: "Tours, Francia",
+        position: "Desarrollador de Software",
+        period: "Feb 2022 - Dic 2024",
         achievements: [
-            "Desarrollo de una base de datos y una interfaz gráfica para la gestión de datos de calidad",
-            "Desarrollo de tableros de control y visualizaciones de datos",
-            "Documentación, soporte y mantenimiento de aplicaciones desarrolladas",
+            "Líder técnico del equipo de automatización de flujos de trabajo empresariales",
+            "Desarrollo de un sistema de ejecución de manufactura personalizado para 3 líneas de empaque",
+            "Diseño e implementación de un prototipo de modelo de machine learning para mantenimiento predictivo",
         ],
     },
 ];
@@ -52,29 +52,31 @@ export const education: Descriptions['education'] = [
 ];
 
 export const skills: Descriptions['skills'] = {
-    programmingLanguages: ["TypeScript", "Python", "Java"],
+    programmingLanguages: ["TypeScript", "Java", "Go", "Python"],
     frontendDevelopment: ["Angular", "React"],
-    backendDevelopment: [
-        "Spring",
-        "Quarkus",
-    ],
+    backendDevelopment: ["Spring"],
     databaseAndStorage: [
-        "MySQL",
         "PostgreSQL",
+        "MySQL",
         "Hibernate",
         "Microsoft SQL Server",
     ],
     cloudAndDevOps: [
+        "AWS",
         "Azure DevOps",
-        "Azure",
         "Github Actions",
     ],
     toolsAndServices: [
         "Docker",
         "Git",
-        "Debian",
-        "Visual Studio Code",
         "IntelliJ IDEA",
+        "Visual Studio Code",
+    ],
+    aiAndCodingAgents: [
+        "Claude",
+        "Claude Code",
+        "GitHub Copilot",
+        "Cursor",
     ],
 };
 

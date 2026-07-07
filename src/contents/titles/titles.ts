@@ -1,6 +1,6 @@
 import type { Titles } from "./type";
 
-export const pageTitle: Titles['pageTitle'] = "Heyner Cuevas | Backend Developer | Java, Spring, React";
+export const pageTitle: Titles['pageTitle'] = "Heyner Cuevas | Software Developer | Java, Spring, Go, React";
 export const pageDescription: Titles['pageDescription'] = "Portfolio";
 export const downloadCV: Titles['downloadCV'] = "Download CV";
 export const home: Titles['home'] = "Home";
@@ -16,6 +16,7 @@ export const skillTypes: Titles['skillTypes'] = {
     databaseAndStorage: "Database & Storage",
     cloudAndDevOps: "Cloud & DevOps",
     toolsAndServices: "Tools & Services",
+    aiAndCodingAgents: "AI & Coding Agents",
 };
 export const seeOnGithub: Titles['seeOnGithub'] = "See on GitHub";
 export const seeOnline: Titles['seeOnline'] = "See Online";
