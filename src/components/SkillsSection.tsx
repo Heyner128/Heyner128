@@ -1,7 +1,8 @@
-import { motion } from "framer-motion";
+import {motion} from "framer-motion";
 import MotionWrapper from "./MotionWrapper";
-import { GlassCard } from "./ui/glass-card";
-import { useTranslatedContent } from "@/lib/hooks";
+import {GlassCard} from "./ui/glass-card";
+import {useTranslatedContent} from "@/lib/hooks";
+import { SkillTag } from "./SkillTag";
 
 const containerVariants = {
   hidden: { opacity: 0 },
